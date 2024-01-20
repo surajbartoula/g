@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 03:38:28 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/01/21 03:38:31 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/01/21 03:45:34 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	copy_str(t_list *list, char *str)
 	while (list)
 	{
 		i = 0;
-		while (list->content[i])
+		while (list->content && list->content[i])
 		{
 			if (list->content[i] == '\n')
 			{
@@ -78,7 +78,7 @@ int	len_to_newline(t_list *list)
 	while (list)
 	{
 		i = 0;
-		while (list->content[i])
+		while (list->content && list->content[i])
 		{
 			if (list->content[i] == '\n')
 			{
