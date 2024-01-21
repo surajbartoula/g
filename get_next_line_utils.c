@@ -6,31 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 03:38:28 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/01/21 03:45:34 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/01/21 12:44:09 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-int	found_newline(t_list *list)
-{
-	int	i;
-
-	if (!list)
-		return (0);
-	while (list)
-	{
-		i = 0;
-		while (list->content[i] && i < BUFFER_SIZE)
-		{
-			if (list->content[i] == '\n')
-				return (1);
-			++i;
-		}
-		list = list->next;
-	}
-	return (0);
-}
 
 t_list	*find_last_node(t_list *list)
 {
@@ -93,7 +73,7 @@ int	len_to_newline(t_list *list)
 	return (len);
 }
 
-void	dealloc(t_list **list, t_list *clean_node, char *str)
+void	ft_clean(t_list **list, t_list *clean_node, char *str)
 {
 	t_list	*temp;
 
@@ -114,4 +94,29 @@ void	dealloc(t_list **list, t_list *clean_node, char *str)
 		free(str);
 		free(clean_node);
 	}
+}
+
+void	ft_freelist(t_list **list)
+{
+	t_list	*last_node;
+	t_list	*clean_node;
+	int		i;
+	int		k;
+	char	*str;
+
+	str = malloc(BUFFER_SIZE + 1);
+	clean_node = malloc(sizeof(t_list));
+	if (!str || !clean_node)
+		return ;
+	last_node = find_last_node(*list);
+	i = 0;
+	k = 0;
+	while (last_node->content[i] && last_node->content[i] != '\n')
+		++i;
+	while (last_node->content[i] && last_node->content[++i])
+		str[k++] = last_node->content[i];
+	str[k] = '\0';
+	clean_node->content = str;
+	clean_node->next = NULL;
+	ft_clean(list, clean_node, str);
 }

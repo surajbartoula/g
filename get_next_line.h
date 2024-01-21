@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 03:38:19 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/01/21 03:38:22 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/01/21 12:41:15 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ int				found_newline(t_list *list);
 t_list			*find_last_node(t_list *list);
 void			copy_str(t_list *list, char *str);
 int				len_to_newline(t_list *list);
-void			dealloc(t_list **list, t_list *clean_node, char *str);
+void			ft_clean(t_list **list, t_list *clean_node, char *str);
 
 char			*get_next_line(int fd);
 void			ft_newlist(t_list **list, int fd);
-void			ft_addback(t_list **list, char *str);
-void			polish_list(t_list **list);
+void			fillstr_list(t_list **list, char *str);
+void			ft_freelist(t_list **list);
 
 #endif
