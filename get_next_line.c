@@ -6,12 +6,11 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 03:38:07 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/01/21 12:43:53 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/01/22 01:57:26 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <stdio.h>
 
 int	found_newline(t_list *list)
 {

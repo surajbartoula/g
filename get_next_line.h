@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 03:38:19 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/01/21 12:41:15 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/01/22 02:11:52 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 4
 # endif
 
 # include <fcntl.h>

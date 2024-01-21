@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 03:38:28 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/01/21 12:44:09 by sbartoul         ###   ########.fr       */
+/*   Created: 2024/01/22 01:55:35 by sbartoul          #+#    #+#             */
+/*   Updated: 2024/01/22 01:55:53 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 t_list	*find_last_node(t_list *list)
 {
