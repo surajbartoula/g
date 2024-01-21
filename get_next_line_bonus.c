@@ -78,7 +78,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || fd > 4095 || BUFFER_SIZE <= 0 || read(fd, &string, 0) < 0)
 		return (NULL);
-	ft_newlist(&list, fd);
+	ft_newlist(list, fd);
 	if (!list[fd])
 		return (0);
 	str_len = len_to_newline(list[fd]);
