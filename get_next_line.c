@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 03:38:07 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/01/22 01:57:26 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/01/23 01:14:47 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, &string, 0) < 0)
 		return (NULL);
-	ft_newlist(list, fd);
+	ft_newlist(&list, fd);
 	if (!list)
 		return (0);
 	str_len = len_to_newline(list);
